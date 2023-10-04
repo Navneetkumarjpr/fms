@@ -1,0 +1,41 @@
+.container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh; /* Make the container take the full height of the viewport */
+
+  }
+
+  form {
+
+    border: 2px solid black;
+
+    width: 30%;
+
+    text-align: center;
+
+    padding: 20px;
+
+  }
+
+  .AvailableFlights {
+
+    padding-bottom: 10px;
+
+  }
+
+  h2 {
+
+    color: rgb(202, 65, 133); /* Set the color of the welcome text to pink */
+
+  }
+
+  form input[type="button"] {
+
+    font-size: 18px; /* Adjust the font size as needed */
+
+  }

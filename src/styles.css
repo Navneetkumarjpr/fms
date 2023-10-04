@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+/* @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('../node_modules/simple-keyboard/build/css/index.css'); */
+body{
+  
+  /* background-color: brown; */
+  background-image: url('https://images.unsplash.com/photo-1604601815764-6d01fc6bebde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1665&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,61 @@
+<!-- <div class="outercontainer">
+    <div class="homecontainer">
+        <div>
+            <input type="email" placeholder="Email">
+            <br>
+            <input type="password" placeholder="Password">
+        </div>
+    <div>
+        <button>Login</button>
+    </div>
+    <div class="signupbutton">
+        <h5>Create new Account</h5>
+        <button><a href="signup">SIGN UP</a></button>
+    </div>
+    <button>Login</button>
+    <div class="adminloginhome">
+        <p>Login as a Admin</p> 
+        <a href="adminlogin">Admin Login</a>
+    </div>
+</div>
+</div> -->
+
+<div class="loginpage">
+
+    <div class="innerlogin">
+        <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+            <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar">
+              <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
+            </div>
+          <form >
+              <!-- (submit)="login(userData)" -->
+              <div class="form-group">
+                  <label for="email">Email : </label>
+                  <input type="text" name="email" class="form-control" placeholder="Email" >
+                  <!-- [(ngModel)]="userData.email" -->
+            </div>
+            <div class="form-group">
+                <label for="password">Password : </label>
+                <input type="password" name="password" class="form-control" placeholder="********" >
+                <!-- [(ngModel)]="userData.password" -->
+                <div class="text-right forget-pass">
+                    <a routerLink="/forget-password">Forget Password ?</a>
+                </div>
+            </div>
+            <div class="text-center">
+                <!-- <input type="submit" class="btn btn-my" value="Login"> -->
+                <a href="welcomeuser">Login</a>
+            </div>
+        </form>
+        <div class="text-center sign-up">
+            Don`t have an account ? <a href="signup">Sign Up</a> here.
+        </div>
+        
+        
+    </div>
+</div>
+</div>
+</div>
+</div>
