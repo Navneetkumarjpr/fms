@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ServiceService } from './service/service.service';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
+import { FlightavailableComponent } from './flightavailable/flightavailable.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
     LoginComponent,
     SignupComponent,
     AdminloginComponent,
-    WelcomeuserComponent
+    WelcomeuserComponent,
+    FlightavailableComponent
   ],
   imports: [
     BrowserModule,

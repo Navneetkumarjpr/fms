@@ -1,35 +1,18 @@
-<div class="container">
-
+<div class="flight-booking-container">
+    <h1>Flight Booking</h1>
     <form>
-
-      <div>
-
-        <div>
-
-          <h2>WELCOME USER!</h2>
-
-        </div>
-
-        <div class="AvailableFlights">
-
-          <input type="button" name="button" value="Book A Flight">
-
-        </div>
-
-        <div class="AvailableFlights">
-
-          <input type="button" name="button" value="View Available Flights">
-
-        </div>
-
-        <div class="AvailableFlights">
-
-          <input type="button" name="button" value="Cancel A Booking">
-
-        </div>
-
+      <div class="form-group">
+        <label for="departure">Departure</label>
+        <input type="text" id="departure" name="departure" placeholder="Enter departure city" />
       </div>
-
+      <div class="form-group">
+        <label for="arrival">Arrival</label>
+        <input type="text" id="arrival" name="arrival" placeholder="Enter arrival city" />
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <button class="searchflight" type="submit">Search Flights</button>
     </form>
-
   </div>
