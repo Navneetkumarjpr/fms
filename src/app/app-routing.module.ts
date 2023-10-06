@@ -6,6 +6,10 @@ import { SignupComponent } from './signup/signup.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
 import { FlightavailableComponent } from './flightavailable/flightavailable.component';
+import { AddflightComponent } from './addflight/addflight.component';
+import { DisplayticketComponent } from './displayticket/displayticket.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { UpdateflightComponent } from './updateflight/updateflight.component';
 
 const routes: Routes = [
   // {path: '', redirectTo: 'booking',pathMatch: 'full'},
@@ -14,6 +18,8 @@ const routes: Routes = [
   // {path: 'updateBooking/:id', component: UpdateBookingComponent},
   // {path: 'bookingDetails/:id', component: BookingDetailsComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'displayticket', component: DisplayticketComponent},
+  {path: 'confirmticket', component: TicketComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   // {path: 'logout', component: LogoutComponent},
@@ -23,8 +29,9 @@ const routes: Routes = [
   // {path: 'update/:airportCode', component: UpdateAirportComponent },
   // {path: 'details/:airportCode', component: AirportDetailsComponent },
   {path: 'flights', component:FlightavailableComponent},
-  // {path: 'addFlight', component: CreateFlightComponent },
+  {path: 'addFlight', component: AddflightComponent },
   // {path: 'updateFlight/:flightNo', component: UpdateFlightComponent },
+  {path: 'updateFlight', component: UpdateflightComponent },
   // {path: 'flightDetails/:flightNo', component: FlightDetailsComponent },
   // {path: 'scheduledFlight/add', component:AddScheduledFlightComponent},
   // {path: 'scheduledFlight/show', component:ShowScheduledFlightsComponent},

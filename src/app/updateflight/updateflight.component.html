@@ -1,0 +1,62 @@
+<div class="add-flight-form">
+    <h2>Update Flight</h2>
+    <form #flightForm="ngForm" (ngSubmit)="onSubmit(flightForm.value)">
+        <div class="form-group">
+            <label for="flightNumber">Flight Number:</label>
+            <input type="number"  name="flightNumber" placeholder="Enter Flight ID" required [(ngModel)]="flights.flightNumber" #flightNumber="ngModel">
+            <div *ngIf="flightForm.controls['flightNumber'].invalid && (flightForm.controls['flightNumber'].dirty || flightForm.controls['flightNumber'].touched)">
+                <div *ngIf="flightForm.controls['flightNumber'].errors?.['required']" class="error-message">Flight Number is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" name="origin" placeholder="Enter Origin" [(ngModel)]="flights.origin" required>
+            <div *ngIf="flightForm.controls['origin'].invalid && (flightForm.controls['origin'].dirty || flightForm.controls['origin'].touched)">
+                <div *ngIf="flightForm.controls['origin'].errors?.['required']" class="error-message">Origin is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter Destination" [(ngModel)]="flights.destination" required>
+            <div *ngIf="flightForm.controls['destination'].invalid && (flightForm.controls['destination'].dirty || flightForm.controls['destination'].touched)">
+                <div *ngIf="flightForm.controls['destination'].errors?.['required']" class="error-message">Destination is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate" [(ngModel)]="flights.departureDate" required>
+            <div *ngIf="flightForm.controls['departureDate'].invalid && (flightForm.controls['departureDate'].dirty || flightForm.controls['departureDate'].touched)">
+                <div *ngIf="flightForm.controls['departureDate'].errors?.['required']" class="error-message">Departure Date is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="departureTime">Departure Time:</label>
+            <input type="time" id="departureTime" name="departureTime" [(ngModel)]="flights.departureTime" required>
+            <div *ngIf="flightForm.controls['departureTime'].invalid && (flightForm.controls['departureTime'].dirty || flightForm.controls['departureTime'].touched)">
+                <div *ngIf="flightForm.controls['departureTime'].errors?.['required']" class="error-message">Departure Time is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="departureCity">Departure City:</label>
+            <input type="text" id="departureCity" name="departureCity" placeholder="Enter Departure City" [(ngModel)]="flights.departureCity" required>
+            <div *ngIf="flightForm.controls['departureCity'].invalid && (flightForm.controls['departureCity'].dirty || flightForm.controls['departureCity'].touched)">
+                <div *ngIf="flightForm.controls['departureCity'].errors?.['required']" class="error-message">Departure City is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="companyDetails">Company:</label>
+            <textarea id="companyDetails" name="companyDetails" placeholder="Enter Company Details" [(ngModel)]="flights.companyDetails" required></textarea>
+            <div *ngIf="flightForm.controls['companyDetails'].invalid && (flightForm.controls['companyDetails'].dirty || flightForm.controls['companyDetails'].touched)">
+                <div *ngIf="flightForm.controls['companyDetails'].errors?.['required']" class="error-message">Company Details are required.</div>
+            </div>
+        </div>
+
+        <button type="submit">Update Flight</button>
+    </form>
+</div>

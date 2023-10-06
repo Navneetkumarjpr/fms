@@ -1,0 +1,28 @@
+.ticket-container{
+    width: 60%;
+    background-color: rgb(181, 181, 255);
+    padding: 1rem 2rem;
+}
+.origindestination{
+    /* display: flex; */
+    justify-content: space-between;
+}
+.origindestination span{
+    padding: 1rem 0;
+}
+.flightdetails{
+    display: flex;
+    justify-content: space-between;
+}
+.bookticketbutton{
+    border: none;
+    background-color: rgb(79, 79, 233);
+    color: white;
+    padding: 10px;
+    
+}
+form {
+    border: 2px solid black;
+    width: 30%;
+    text-align: top;
+}

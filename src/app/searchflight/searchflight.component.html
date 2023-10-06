@@ -1,0 +1,64 @@
+<div class="outerflightform">
+
+    <div class="search-flight-form">
+        <h2>Search Flight</h2>
+        <form #flightForm="ngForm" (ngSubmit)="onSubmit(flightForm.value)">
+            <div class="form-group">
+                <label for="flightNumber">Flight Number:</label>
+                <input type="text" id="flightNumber" name="flightNumber" placeholder="Enter Flight Number" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['flightNumber'].invalid && (flightForm.controls['flightNumber'].dirty || flightForm.controls['flightNumber'].touched)">
+                    <div *ngIf="flightForm.controls['flightNumber'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>
+            </div>
+            
+            <div class="form-group">
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" name="origin" placeholder="Enter Origin City" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['origin'].invalid && (flightForm.controls['origin'].dirty || flightForm.controls['origin'].touched)">
+                    <div *ngIf="flightForm.controls['origin'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter Destination City" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['destination'].invalid && (flightForm.controls['destination'].dirty || flightForm.controls['destination'].touched)">
+                    <div *ngIf="flightForm.controls['destination'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+            
+            <div class="form-group">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDate" name="departureDate" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['departureDate'].invalid && (flightForm.controls['departureDate'].dirty || flightForm.controls['departureDate'].touched)">
+                    <div *ngIf="flightForm.controls['departureDate'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+
+            <div class="form-group">
+                <label for="departureTime">Departure Time:</label>
+                <input type="time" id="departureTime" name="departureTime" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['departureTime'].invalid && (flightForm.controls['departureTime'].dirty || flightForm.controls['departureTime'].touched)">
+                    <div *ngIf="flightForm.controls['departureTime'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalDate">Arrival Date:</label>
+                <input type="date" id="arrivalDate" name="arrivalDate" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['arrivalDate'].invalid && (flightForm.controls['arrivalDate'].dirty || flightForm.controls['arrivalDate'].touched)">
+                    <div *ngIf="flightForm.controls['arrivalDate'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalDate">Arrival Time:</label>
+                <input type="time" id="arrivalTime" name="arrivalTime" required [(ngModel)]="searchflights.flightNumber" #flightNumber="ngModel">
+                <div *ngIf="flightForm.controls['arrivalTime'].invalid && (flightForm.controls['arrivalTime'].dirty || flightForm.controls['arrivalTime'].touched)">
+                    <div *ngIf="flightForm.controls['arrivalTime'].errors?.['required']" class="error-message">Flight Number is required.</div>
+                </div>>>
+            </div>
+            <button type="submit">Search Flights</button>
+        </form>
+    </div>
+</div>

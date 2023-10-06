@@ -1,0 +1,24 @@
+<div class="remove">
+
+    <div class="flight-entry-container">
+        <label for="flightId">Flight ID:</label>
+        <input
+        type="text"
+        id="flightId"
+        name="flightId"
+        placeholder="Enter Flight ID"
+        [(ngModel)]="flightId"
+        #flightIdInput="ngModel"
+        required
+        />
+        <div *ngIf="flightIdInput.invalid && (flightIdInput.dirty || flightIdInput.touched)">
+            <div *ngIf="flightIdInput.errors?.['required']">Flight ID is required.</div>
+        </div>
+        
+        <div class="buttons">
+            <button (click)="onCancel()">Cancel</button>
+            <button (click)="onRemove()" [disabled]="flightIdInput.invalid">Remove</button>
+        </div>
+    </div>
+</div>
+    

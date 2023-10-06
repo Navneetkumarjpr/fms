@@ -5,7 +5,15 @@
 body{
   
   /* background-color: brown; */
-  background-image: url('https://images.unsplash.com/photo-1604601815764-6d01fc6bebde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1665&q=80');
-  background-size: auto;
+  background-image: url('assets/images/image_1.avif');
+
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position:center center;
   background-repeat: no-repeat;
+  background-size: cover;
+  
+
 }

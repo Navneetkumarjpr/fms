@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { User } from './model/User';
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+
+  @Input()user:User;
+
+  constructor()
+  {
+    this.user=new User();
+  }
 
 }

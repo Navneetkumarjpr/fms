@@ -8,10 +8,15 @@
      <p>Please fill in this form to create an account.</p>
    
      <hr>
-   
+     <div class="form-group">
      <label for="email"><b>Email</b></label>
-   
-     <input type="text" placeholder="Enter Email" name="email" id="email" required>
+     <input type="text" placeholder="Enter Email"  required class="form-control" [(ngModel)]="user.userEmail" name="email" #email="ngModel">
+     <div *ngIf="email.touched && email.errors?.['required']">
+        <div class="alert alert-danger" style="padding: 0;">
+            Email is blank
+        </div>
+    </div>
+</div>
    
      <label for="psw"><b>Password</b></label>
    
