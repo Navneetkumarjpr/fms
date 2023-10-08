@@ -1,0 +1,10 @@
+{
+    "signup":[
+        {
+            "userName":"Navneet Kumar",
+            "userEmail":"naveet@gmail.com",
+            "userPassword":"navneet",
+            "userPhone":21312313
+        }
+    ]
+}

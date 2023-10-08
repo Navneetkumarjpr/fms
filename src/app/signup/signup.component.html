@@ -1,5 +1,5 @@
 
-<form action="/action_page.php">
+<form #signupform="ngForm" (onsubmit)="signUp(signupform.value)">
 
     <div class="container">
    
@@ -16,21 +16,44 @@
             Email is blank
         </div>
     </div>
-</div>
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name"  required class="form-control" [(ngModel)]="user.userName" name="name" #name="ngModel">
+        <div *ngIf="name.touched && name.errors?.['required']">
+           <div class="alert alert-danger" style="padding: 0;">
+               Name is blank
+           </div>
+       </div>
+    </div>
+    <div class="form-group">
+        <label for="phone"><b>Phone Number</b></label>
+        <input type="number" placeholder="Enter Phone Number"  required class="form-control" [(ngModel)]="user.userPhone" name="phone" #phone="ngModel">
+        <div *ngIf="phone.touched && phone.errors?.['required']">
+           <div class="alert alert-danger" style="padding: 0;">
+               Phone is blank
+           </div>
+       </div>
+    </div>
+    <div class="form-group">
+        <label for="pass"><b>Password</b></label>
+        <input type="text" placeholder="Enter Password"  required class="form-control" [(ngModel)]="user.userPassword" name="pass" #pass="ngModel">
+        <div *ngIf="pass.touched && pass.errors?.['required']">
+           <div class="alert alert-danger" style="padding: 0;">
+               Phone is blank
+           </div>
+       </div>
+    </div>
    
-     <label for="psw"><b>Password</b></label>
+     <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
    
-     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-   
-     <label for="psw-repeat"><b>Repeat Password</b></label>
-   
-     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required> -->
    
      <hr>
    
      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
    
-     <button type="submit" class="registerbtn">Register</button>
+     <button type="submit" class="registerbtn" [disabled]="signupform.valid">Register</button>
    
     </div>
    

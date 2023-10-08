@@ -17,7 +17,10 @@ import { RemoveticketComponent } from './removeticket/removeticket.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { UpdateflightComponent } from './updateflight/updateflight.component';
 import { SearchflightComponent } from './searchflight/searchflight.component';
-
+import { ButtonModule } from 'smart-webcomponents-angular/button';
+import { InputModule } from 'smart-webcomponents-angular/input';
+import { CheckPasswordDirective } from './password.directive';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +36,16 @@ import { SearchflightComponent } from './searchflight/searchflight.component';
     RemoveticketComponent,
     TicketComponent,
     UpdateflightComponent,
-    SearchflightComponent
+    SearchflightComponent,
+    CheckPasswordDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ButtonModule,
+    InputModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

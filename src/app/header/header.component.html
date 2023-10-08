@@ -14,17 +14,18 @@
         </li>
         <li *ngIf="user" class="nav-item">
             <button class="btn btn-info">
-                <a href="userpanel">Home</a>
+                <a routerLink="userpanel">Home</a>
+                
             </button>
         </li>
         <li *ngIf="admin" class="nav-item">
             <button class="btn btn-info">
-                <a href="adminlogin">Admin</a>
+                <a routerLink="adminlogin">Admin</a>
             </button>
         </li>
         <li *ngIf="!buttonFlag" class="nav-item">
             <button class="btn btn-success">
-                <a href="login">LOG IN</a>
+                <a routerLink="login">LOG IN</a>
             </button>
         </li>
         <li *ngIf="buttonFlag" class="nav-item">
