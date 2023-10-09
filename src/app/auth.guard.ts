@@ -3,6 +3,7 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } fro
 import { CanActivateFn } from '@angular/router';
 import { ServiceService } from './service/service.service';
 import { Observable } from 'rxjs';
+import { LoginService } from './service/login/login.service';
 
 // export const authGuard: CanActivateFn = (route, state) => {
   
@@ -13,13 +14,13 @@ import { Observable } from 'rxjs';
   providedIn:'root'
 })
 export class AuthGuard implements CanActivate{
-  constructor(private userservice:ServiceService){
+  constructor(private userservice:LoginService){
 
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if(localStorage.getItem('user')){
       return true;
     }
-    return this.userservice.isUserLoggedIn ;
+    return this.userservice.isUserLoggedIn;
   }
 }

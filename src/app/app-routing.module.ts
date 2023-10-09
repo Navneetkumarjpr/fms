@@ -10,6 +10,7 @@ import { AddflightComponent } from './addflight/addflight.component';
 import { DisplayticketComponent } from './displayticket/displayticket.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { UpdateflightComponent } from './updateflight/updateflight.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   // {path: '', redirectTo: 'booking',pathMatch: 'full'},
@@ -17,14 +18,15 @@ const routes: Routes = [
   // {path: 'addBooking', component: CreateBookingComponent},
   // {path: 'updateBooking/:id', component: UpdateBookingComponent},
   // {path: 'bookingDetails/:id', component: BookingDetailsComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  // {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', component: HomeComponent},
   {path: 'displayticket', component: DisplayticketComponent},
   {path: 'confirmticket', component: TicketComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   // {path: 'logout', component: LogoutComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'welcomeuser', component: WelcomeuserComponent },
+  {path: 'welcomeuser', component: WelcomeuserComponent, canActivate:[AuthGuard]},
   // {path: 'addAirport', component: CreateAirportComponent },
   // {path: 'update/:airportCode', component: UpdateAirportComponent },
   // {path: 'details/:airportCode', component: AirportDetailsComponent },
