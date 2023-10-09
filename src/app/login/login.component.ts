@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ServiceService } from "../service/service.service";
 import { UserLoginDetails } from './model/User';
+import { LoginService } from '../service/login/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +10,7 @@ import { UserLoginDetails } from './model/User';
 export class LoginComponent{
   userData:any;
   @Input() user:UserLoginDetails;
-  constructor() {
+  constructor(private userlogin:LoginService) {
     this.user=new UserLoginDetails();
   }
   submitted:boolean=false;
@@ -26,9 +27,9 @@ export class LoginComponent{
   //   var msg = event.target.value;
   //   this.user.changeData(msg);
   // }
-  // login(data) {
-  //   this.user.changeData(data);
-  // }
+  login(data:UserLoginDetails) {
+    this.userlogin.userLoginUp(data);
+  }
   // changeData(){
 
   // }

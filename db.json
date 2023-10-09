@@ -1,19 +1,82 @@
 {
-  "posts": [
+  "signup": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "userName": "jhsdf Kumar",
+      "userEmail": "naveetjhjh@gmail.com",
+      "userPassword": "navneet",
+      "userPhone": 2131254313,
+      "id": 2
+    },
+    {
+      "userName": "jhsdf Kumar",
+      "userEmail": "naveetjhjh@gmail.com",
+      "userPassword": "navneet",
+      "userPhone": 2131254313,
+      "id": 3
+    },
+    {
+      "userName": "bhumi mittal",
+      "userEmail": "naveetjhjh@gmail.com",
+      "userPassword": "navneet",
+      "userPhone": 2131254313,
+      "id": 4
+    },
+    {
+      "email": "prashant@gmail.com",
+      "name": "klskd",
+      "phone": 65656,
+      "pass": "hjibfijdbij",
+      "id": 5
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": 0,
+      "pass": "",
+      "id": 6
+    },
+    {
+      "email": "asdgfihlg@hs.com",
+      "name": "jsdhf",
+      "phone": 8648654,
+      "pass": "ifhkhfi",
+      "id": 7
+    },
+    {
+      "email": "rfdyhrfgx",
+      "name": "ujujy",
+      "phone": 5449646895476875000,
+      "pass": "jhfgfyyg",
+      "id": 8
+    },
+    {
+      "email": "bhumika@gmail.com",
+      "name": "jhgah",
+      "phone": 6547981654,
+      "pass": "jhdsfkdf",
+      "id": 9
     }
   ],
-  "comments": [
+  "login": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "email": "asdgfihlg@hs.com",
+      "password": "slkdmfns",
+      "id": 1
+    },
+    {
+      "email": "prashant@gmail.com",
+      "password": "bdsfkjlbd",
+      "id": 2
+    },
+    {
+      "email": "hsdji@gmail.com",
+      "password": "huhbufog",
+      "id": 3
+    },
+    {
+      "email": "guyhf@gmail.com",
+      "password": "hgsdhfuasdukfhuhf",
+      "id": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

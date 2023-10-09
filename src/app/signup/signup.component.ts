@@ -35,6 +35,9 @@ export class SignupComponent implements AfterViewInit, OnInit {
   }
 
   signUp(data:User){
+    console.log(data);
+    
+    console.log('hello')
     this.usersignup.userSignUp(data)
   }
  

@@ -1,0 +1,163 @@
+.welcome-container {
+    margin-top: 5rem;
+    width: 60%;
+    background: #c31432; /* fallback for old browsers */
+   
+   background: -webkit-linear-gradient(to right, #240b36, #c31432); /* Chrome 10-25, Safari 5.1-6 */
+   
+   background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+    color: #fff;
+   
+    padding: 20px;
+   
+    border-radius: 10px;
+   
+   }
+   
+   .welcome-container h1{
+   
+     text-align: center;
+   
+   }
+   
+   .main-content {
+   
+    display: flex;
+   
+    justify-content: space-between;
+   
+    align-items: center;
+   
+    margin-top: 20px;
+   
+   }
+   
+   .about-us {
+   
+    flex: 1;
+   
+    padding-right: 20px;
+   
+   }
+   
+   .about-us p{
+   
+     text-align: justify;
+   
+   text-justify: inter-word;
+   
+   font-size:large;
+   /* background-color: aqua; */
+   border-right: 2px solid black;
+   padding-right: 5rem;
+   }
+   
+   .vertical-line {
+   
+    border-left: 1px solid #ccc;
+   
+    height: 100%;
+   
+    margin: 0 20px;
+   
+   }
+   
+   .action-buttons {
+   
+    flex: 1;
+   
+    text-align: center;
+    /* background-color: #c31432; */
+   
+   }
+   
+   .action-buttons button {
+   
+    margin: 10px;
+   
+    padding: 10px 20px;
+   
+    font-size: 16px;
+   
+    cursor: pointer;
+   
+    border: none;
+   
+    background-color: #d39e00;
+   
+    /* color:aliceblue ; */
+   
+    border-radius: 10px;
+   
+   }
+   
+   
+   h1 {
+   
+    text-align: center;
+   
+   }
+   
+   .about-us {
+   
+    margin-top: 20px;
+   
+   }
+   
+   h2 {
+    border-bottom: 2px solid #fff;
+   }
+   
+   ul {
+    list-style-type: none;
+    padding: 0;
+   }
+   
+   li {
+   
+    margin-bottom: 10px;
+   
+   }
+   
+   .action-buttons button {
+   
+    margin: 10px;
+   
+    padding: 10px 20px;
+   
+    font-size: 16px;
+   
+    cursor: pointer;
+   
+    background-color:#d39e00; /* Yellow background */
+   
+    /* color: #fff2a7; Orange text color */
+   
+    border:none;
+   
+    border-radius: 5px;
+   
+    transition: background-color 0.3s ease;
+   
+   }
+   
+   .action-buttons button:hover {
+   
+    background-color: #d39e00 /* Darker yellow on hover */
+   
+    /* color: #FF9800; Orange text color on hover */
+   
+   }
+   
+   .main{
+   
+     display: flex;
+   
+     justify-content: center;
+   
+     align-items: center;
+     /* margin-top: 5%; */
+     /* background-color: #d39e00; */
+   
+   }

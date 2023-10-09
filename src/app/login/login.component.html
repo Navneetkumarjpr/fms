@@ -22,14 +22,14 @@
 
 <div class="loginpage">
 
-    <div class="innerlogin"  (ngSubmit)="submit()">
+    <div  class="innerlogin" >
         <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
             <div class="card auth">
         <div class="card-body auth-card">
           <div class="auth-avatar">
               <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
             </div>
-          <form >
+          <form #loginform="ngForm" (ngSubmit)="login(loginform.value)">
               <!-- (submit)="login(userData)" -->
               <div class="form-group">
                   <label for="email">Email : </label>
@@ -70,8 +70,8 @@
                 </div>
             </div>
             <div class="text-center" >
-                <!-- <input type="submit" class="btn btn-my" value="Login"> -->
-                <a href="welcomeuser">Login</a>
+                <input type="submit" class="btn btn-my" value="Login">
+                <!-- <a href="welcomeuser">Login</a> -->
             </div>
         </form>
         <div class="text-center sign-up">
