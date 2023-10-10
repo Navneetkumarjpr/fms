@@ -23,6 +23,6 @@
             <div *ngIf="bookingForm.controls['bookdate'].errors?.['required']" class="error-message">Booking date is required.</div>
         </div>/> 
       </div>
-      <button class="searchflight" type="submit">Search Flights</button>
+      <button class="searchflight" type="submit" [disabled]="bookingForm.invalid">Search Flights</button>
     </form> 
   </div>

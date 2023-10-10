@@ -12,7 +12,7 @@
         <li *ngIf="" class="nav-item navbarlist" style="margin-right: 30px; margin-top: 8px; color: white;">
               <em>Welcome {{username}}</em>
         </li>
-        <li *ngIf="buttonFlag" class="nav-item m-1 navbarlist">
+        <li *ngIf="!buttonFlag" class="nav-item m-1 navbarlist">
             <button class="btn btn-info navbarbutton">
                 <a routerLink="">Home</a>
                 
@@ -29,8 +29,8 @@
             </button>
         </li>
         <li *ngIf="!buttonFlag" class="nav-item m-1">
-            <button class="btn btn-info navbarbutton">
-                <a href="logout">LOG OUT</a>
+            <button (click)="logout()" class="btn btn-info navbarbutton" >
+                LOG OUT
             </button>
         </li>
       </ul>

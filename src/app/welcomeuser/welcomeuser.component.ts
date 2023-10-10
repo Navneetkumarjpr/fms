@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { booking } from './booking';
+import { Router } from '@angular/router';
+import { SearchflightsService } from '../service/searchflights.service';
 
 
 @Component({
@@ -8,14 +10,15 @@ import { booking } from './booking';
   styleUrls: ['./welcomeuser.component.css']
 })
 export class WelcomeuserComponent {
-  constructor(){
-    
+  constructor(private router:Router, private searchflights:SearchflightsService){
+
   }
   bookFlight = new booking()
   onSubmit(form: booking) {
     // if (form.valid) {
       // Handle form submission
-      console.log('Form submitted:', form);
+      // console.log('Form submitted:', form);
+      this.searchflights.userbooking(form);
     // }
   }
 }

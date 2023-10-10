@@ -17,12 +17,12 @@ isUserLoggedIn=new BehaviorSubject<boolean>(false);
   userSignUp(data:User){
     this.http.post('http://localhost:3000/signup',data,{observe:'response'}).subscribe((result)=>{
       this.isUserLoggedIn.next(true);
-      localStorage.setItem('user',JSON.stringify(result.body))
+      localStorage.setItem('userlogin',JSON.stringify(result.body))
       this.router.navigate(['welcomeuser'])
     });
   }
   reloadUser(){
-    if(localStorage.getItem('user')){
+    if(localStorage.getItem('userlogin')){
       this.isUserLoggedIn.next(true);
       this.router.navigate(['welcomeuser'])
     }
