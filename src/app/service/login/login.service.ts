@@ -16,8 +16,10 @@ export class LoginService {
 isUserLoggedIn=new BehaviorSubject<boolean>(false);
   userLoginUp
   (data:UserLoginDetails){
-    this.http.post('http://localhost:3000/login',data,{observe:'response'}).subscribe((result)=>{
+    console.log("hello ",data);
+    this.http.get(`http://localhost:3000/signup?email=${data.userEmail}&password=${data.userPassword}`,{observe:'response'}).subscribe((result)=>{
       this.isUserLoggedIn.next(true);
+      console.log(result)
       localStorage.setItem('userlogin',JSON.stringify(result.body))
       this.router.navigate(['welcomeuser'])  
     });
