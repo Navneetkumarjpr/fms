@@ -1,3 +1,14 @@
 body{
     /* background-image: url(''); */
 }
+.imagebackground{
+    background-image: url('src\assets\images\image_1.avif');
+    position: absolute;
+    /* background-position: center; */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+
+    z-index: -1;
+
+}

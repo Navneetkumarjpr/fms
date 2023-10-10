@@ -1,6 +1,6 @@
 <!-- HEADER -->
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent header" style="background-color: black;">
-    <a class="navbar-brand" routerLink="">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent header p-2" style="background-color: black;">
+    <a class="navbar-brand " routerLink="">
      <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
         Flight Reservation System
     </a>
@@ -8,28 +8,28 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li *ngIf="" class="nav-item" style="margin-right: 30px; margin-top: 8px; color: white;">
+      <ul class="navbar-nav mr-auto list-unstyled">
+        <li *ngIf="" class="nav-item navbarlist" style="margin-right: 30px; margin-top: 8px; color: white;">
               <em>Welcome {{username}}</em>
         </li>
-        <li *ngIf="user" class="nav-item">
-            <button class="btn btn-info">
+        <li *ngIf="buttonFlag" class="nav-item m-1 navbarlist">
+            <button class="btn btn-info navbarbutton">
                 <a routerLink="">Home</a>
                 
             </button>
         </li>
-        <li *ngIf="admin" class="nav-item">
-            <button class="btn btn-info">
+        <li *ngIf="admin" class="nav-item m-1 navbarlist">
+            <button class="btn btn-info navbarbutton">
                 <a routerLink="adminlogin">Admin</a>
             </button>
         </li>
-        <li *ngIf="!buttonFlag" class="nav-item">
-            <button class="btn btn-success">
+        <li *ngIf="buttonFlag" class="nav-item m-1">
+            <button class="btn btn-info navbarbutton">
                 <a routerLink="login">LOG IN</a>
             </button>
         </li>
-        <li *ngIf="buttonFlag" class="nav-item">
-            <button class="btn btn-danger">
+        <li *ngIf="!buttonFlag" class="nav-item m-1">
+            <button class="btn btn-info navbarbutton">
                 <a href="logout">LOG OUT</a>
             </button>
         </li>

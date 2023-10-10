@@ -1,18 +1,28 @@
 <div class="flight-booking-container">
     <h1>Flight Booking</h1>
-    <form>
+    <form  #bookingForm="ngForm" (ngSubmit)="onSubmit(bookingForm.value)">
       <div class="form-group">
         <label for="departure">Departure</label>
-        <input type="text" id="departure" name="departure" placeholder="Enter departure city" />
-      </div>
+        <input type="text" id="departure" name="departure" placeholder="Enter departure city" [(ngModel)]="bookFlight.departure" required>
+        <div *ngIf="bookingForm.controls['departure'].invalid && (bookingForm.controls['departure'].dirty || bookingForm.controls['departure'].touched)">
+            <div *ngIf="bookingForm.controls['departure'].errors?.['required']" class="error-message">Departure is required.</div>
+        </div>
+    </div> />
+      
       <div class="form-group">
         <label for="arrival">Arrival</label>
-        <input type="text" id="arrival" name="arrival" placeholder="Enter arrival city" />
+        <input type="text" id="arrival" name="arrival" placeholder="Enter arrival city" [(ngModel)]="bookFlight.arrival" required>
+        <div *ngIf="bookingForm.controls['arrival'].invalid && (bookingForm.controls['arrival'].dirty || bookingForm.controls['arrival'].touched)">
+            <div *ngIf="bookingForm.controls['arrival'].errors?.['required']" class="error-message">Arrival is required.</div>
+        </div>/>
       </div>
       <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" />
+        <label for="bookdate">Date</label>
+        <input type="date" id="bookdate" name="bookdate" [(ngModel)]="bookFlight.bookdate" required>
+        <div *ngIf="bookingForm.controls['bookdate'].invalid && (bookingForm.controls['bookdate'].dirty || bookingForm.controls['bookdate'].touched)">
+            <div *ngIf="bookingForm.controls['bookdate'].errors?.['required']" class="error-message">Booking date is required.</div>
+        </div>/> 
       </div>
       <button class="searchflight" type="submit">Search Flights</button>
-    </form>
+    </form> 
   </div>

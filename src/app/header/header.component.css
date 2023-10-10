@@ -5,9 +5,22 @@
     justify-content: flex-end;
 }
 .header{
+    /* filter: blur(1px); */
+    background: none;
+}
+.header{
     border-bottom: 2px solid black;
     background-color: rgb(2, 15, 15);
 }
 .homecontainer{
     background-color: aqua;
+}
+.navbarbutton a{
+    background: none;
+    color: white;
+    text-decoration: none;
+}
+.navbarlist{
+    border: none;
+    color: antiquewhite;
 }

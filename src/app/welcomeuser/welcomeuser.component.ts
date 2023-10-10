@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { booking } from './booking';
+
 
 @Component({
   selector: 'app-welcomeuser',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./welcomeuser.component.css']
 })
 export class WelcomeuserComponent {
-
+  constructor(){
+    
+  }
+  bookFlight = new booking()
+  onSubmit(form: booking) {
+    // if (form.valid) {
+      // Handle form submission
+      console.log('Form submitted:', form);
+    // }
+  }
 }

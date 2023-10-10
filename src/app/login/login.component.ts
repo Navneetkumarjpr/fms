@@ -28,6 +28,7 @@ export class LoginComponent{
   //   this.user.changeData(msg);
   // }
   login(data:UserLoginDetails) {
+    // if(data.userEmail.length!=0 )
     this.userlogin.userLoginUp(data);
   }
   // changeData(){
