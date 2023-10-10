@@ -1,5 +1,6 @@
 <div class="add-flight-form">
     <h2>Update Flight</h2>
+    <div *ngIf="true">
     <form #flightForm="ngForm" (ngSubmit)="onSubmit(flightForm.value)">
         <div class="form-group">
             <label for="flightNumber">Flight Number:</label>
@@ -59,4 +60,5 @@
 
         <button type="submit">Update Flight</button>
     </form>
+</div>
 </div>

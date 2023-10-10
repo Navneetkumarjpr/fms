@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AddFlight } from '../addflight/addflight';
+import { updateflight } from './updateflight';
 
 @Component({
   selector: 'app-updateflight',
@@ -7,11 +8,17 @@ import { AddFlight } from '../addflight/addflight';
   styleUrls: ['./updateflight.component.css']
 })
 export class UpdateflightComponent {
-  flights = new AddFlight
+  flights=new AddFlight;
+
   onSubmit(form: any) {
     if (form.valid) {
       // Handle form submission
       console.log('Form submitted:', form.value);
     }
+  }
+  flight:updateflight[]=[];
+  CheckUpdateflight()
+  {
+   
   }
 }
