@@ -1,0 +1,72 @@
+<div class="form-group">
+    <br>
+    <br>
+    <h2 class="text-center" style="color: antiquewhite;">Book Flight Ticket</h2>
+    <br>
+    <br>
+    <form  #signupform="ngForm" (ngSubmit)="onSubmit(signupform.value)">
+        <div class="container">
+        <div class="form-group">
+            <label for="Name"><b>Enter Name</b></label>
+            <input type="text" placeholder="Enter Name"  required class="form-control" [(ngModel)]="user1.userName" name="Name" #Name="ngModel">
+            <div *ngIf="Name.touched && Name.errors?.['required']">
+               <div class="alert alert-danger" style="padding: 0;">
+                   Name is blank
+               </div>
+           </div>
+           </div>
+       
+        <div class="form-group">
+            <label for="Age"><b>Enter Age</b></label>
+            <input type="text" placeholder="Enter Age"  required class="form-control" [(ngModel)]="user1.userAge" name="Age" #Age="ngModel">
+            <div *ngIf="Age.touched && Age.errors?.['required']">
+               <div class="alert alert-danger" style="padding: 0;">
+                   Age is blank
+               </div>
+           </div>
+           </div>
+        
+        <div class="form-group">
+            <label for="Phone"><b>Enter Phone Number</b></label>
+            <input type="text" placeholder="Enter Phone number"  required class="form-control" [(ngModel)]="user1.userPhone" name="Phone" #Phone="ngModel">
+            <div *ngIf="Phone.touched && Phone.errors?.['required']">
+               <div class="alert alert-danger" style="padding: 0;">
+                   Phone number is blank
+               </div>
+           </div>
+           </div>
+        
+        <div class="form-group">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email"  required class="form-control" [(ngModel)]="user1.userEmail" name="email" #email="ngModel">
+            <div *ngIf="email.touched && email.errors?.['required']">
+               <div class="alert alert-danger" style="padding: 0;">
+                   Email is blank
+               </div>
+           </div>
+           </div>
+        <div class="col-md-12 text-center">
+            <button class="btn btn-primary" type="submit" (click)="openModel()">Book Ticket</button>
+        </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">  Booking Ticket SucessFully </h4>
+        <button type="button" class="btn-close" (click)="closeModel()" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-footer">
+        <div>
+            <button  class="btn btn-primary"  (click)="showTicket()">Show Ticket</button>
+        </div>
+        <button type="button" class="btn btn-danger" (click)="closeModel()"  data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

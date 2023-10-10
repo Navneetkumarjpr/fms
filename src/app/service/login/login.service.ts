@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http'
 // import { User } from '../signup/model';
 import { Router } from '@angular/router';
 import { UserLoginDetails } from 'src/app/login/model/User';
+import { HeaderComponent } from 'src/app/header/header.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,9 +20,15 @@ isUserLoggedIn=new BehaviorSubject<boolean>(false);
     console.log("hello ",data);
     this.http.get(`http://localhost:3000/signup?email=${data.userEmail}&password=${data.userPassword}`,{observe:'response'}).subscribe((result)=>{
       this.isUserLoggedIn.next(true);
-      console.log(result)
       localStorage.setItem('userlogin',JSON.stringify(result.body))
       this.router.navigate(['welcomeuser'])  
     });
+  }
+
+  setlogin(){
+    if(localStorage.getItem('userlogin')){
+     return true;
+    } 
+    return false;
   }
 }

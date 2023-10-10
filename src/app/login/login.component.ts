@@ -28,7 +28,6 @@ export class LoginComponent{
   //   this.user.changeData(msg);
   // }
   login(data:UserLoginDetails) {
-    console.log(data);
     this.userlogin.userLoginUp(data);
   }
   // changeData(){
