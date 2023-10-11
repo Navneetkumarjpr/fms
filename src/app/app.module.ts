@@ -22,6 +22,7 @@ import { InputModule } from 'smart-webcomponents-angular/input';
 import { CheckPasswordDirective } from './password.directive';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FlightBookingComponent } from './flightavailable/flight-booking/flight-booking.component';
+
 @NgModule({
   declarations: [
     AppComponent,

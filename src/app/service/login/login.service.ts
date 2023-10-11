@@ -17,6 +17,7 @@ export class LoginService {
 isUserLoggedIn=new BehaviorSubject<boolean>(false);
   userLoginUp
   (data:UserLoginDetails){
+    console.log("call 1 ")
     this.http.post('http://localhost:3000/login',data,{observe:'response'}).subscribe((result)=>{
       this.isUserLoggedIn.next(true);
       // this.comp.buttonFlag=true;
