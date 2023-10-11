@@ -15,17 +15,17 @@ import { FlightBookingComponent } from './flightavailable/flight-booking/flight-
 import { SearchflightComponent } from './searchflight/searchflight.component';
 
 const routes: Routes = [
-  // {path: '', redirectTo: 'booking',pathMatch: 'full'},
+// {path: '', redirectTo: 'booking',pathMatch: 'full'},
   // {path: 'bookings', component: BookingListComponent},
   // {path: 'addBooking', component: CreateBookingComponent},
   // {path: 'updateBooking/:id', component: UpdateBookingComponent},
   // {path: 'bookingDetails/:id', component: BookingDetailsComponent},
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '', component: HomeComponent},
-  {path: 'search', component: SearchflightComponent},
+  {path: 'search', component: SearchflightComponent,canActivate:[AuthGuard]},
 
-  {path: 'displayticket', component: DisplayticketComponent},
-  {path: 'confirmticket', component: TicketComponent},
+  {path: 'displayticket', component: DisplayticketComponent,canActivate:[AuthGuard]},
+  {path: 'confirmticket', component: TicketComponent,canActivate:[AuthGuard]},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   // {path: 'logout', component: LogoutComponent},
@@ -35,7 +35,7 @@ const routes: Routes = [
   // {path: 'addAirport', component: CreateAirportComponent },
   // {path: 'update/:airportCode', component: UpdateAirportComponent },
   // {path: 'details/:airportCode', component: AirportDetailsComponent },
-  {path: 'flights', component:FlightavailableComponent},
+  {path: 'flights', component:FlightavailableComponent,canActivate:[AuthGuard]},
   {path: 'addFlight', component: AddflightComponent },
   // {path: 'updateFlight/:flightNo', component: UpdateFlightComponent },
   {path: 'updateFlight', component: UpdateflightComponent },

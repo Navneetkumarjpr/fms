@@ -20,10 +20,15 @@ isUserLoggedIn=new BehaviorSubject<boolean>(false);
     console.log("call 1 ")
     this.http.post('http://localhost:3000/login',data,{observe:'response'}).subscribe((result)=>{
       this.isUserLoggedIn.next(true);
-      // this.comp.buttonFlag=true;
-      console.log("call ",this.isUserLoggedIn.value)
       localStorage.setItem('userlogin',JSON.stringify(result.body))
       this.router.navigate(['welcomeuser'])  
     });
+  }
+
+  setlogin(){
+    if(localStorage.getItem('userlogin')){
+     return true;
+    } 
+    return false;
   }
 }

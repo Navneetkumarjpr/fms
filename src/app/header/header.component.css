@@ -3,14 +3,17 @@
     display: flex;
     /* border-bottom: 2px solid black; */
     justify-content: flex-end;
+
 }
-.header{
+.headerheading{
     /* filter: blur(1px); */
-    background: none;
+    /* background: none; */
+    color: whit;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .header{
     border-bottom: 2px solid black;
-    background-color: rgb(2, 15, 15);
+    /* background-color: rgb(2, 15, 15); */
 }
 .homecontainer{
     background-color: aqua;

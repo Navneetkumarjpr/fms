@@ -11,11 +11,11 @@ export class SearchflightsService {
   constructor(private http:HttpClient, private router:Router) { 
 
   }
-  userSignUp(data:booking){
+  userbooking(data:booking){
     this.http.post('http://localhost:3000/signup',data,{observe:'response'}).subscribe((result)=>{
       // this.isUserLoggedIn.next(true);
-      localStorage.setItem('user',JSON.stringify(result.body))
-      this.router.navigate(['welcomeuser'])
+      // localStorage.setItem('user',JSON.stringify(result.body))
+      this.router.navigate(['flights'])
     });
   }
 }
