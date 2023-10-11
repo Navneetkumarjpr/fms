@@ -3,7 +3,7 @@
     <form #flightForm="ngForm" (ngSubmit)="onSubmit(flightForm.value)">
         <div class="form-group">
             <label for="flightNumber">Flight Number:</label>
-            <input type="number"  name="flightNumber" placeholder="Enter Flight ID" required [(ngModel)]="flights.flightNumber" #flightNumber="ngModel">
+            <input type="number"  name="flightNumber" placeholder="0" required [(ngModel)]="flights.flightNumber" #flightNumber="ngModel">
             <div *ngIf="flightForm.controls['flightNumber'].invalid && (flightForm.controls['flightNumber'].dirty || flightForm.controls['flightNumber'].touched)">
                 <div *ngIf="flightForm.controls['flightNumber'].errors?.['required']" class="error-message">Flight Number is required.</div>
             </div>
@@ -57,6 +57,6 @@
             </div>
         </div>
 
-        <button type="submit">Add Flight</button>
+        <button type="submit" [disabled]="!flightForm.valid">Add Flight</button>
     </form>
 </div>

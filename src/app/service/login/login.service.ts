@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import {HttpClient} from '@angular/common/http'
 // import { User } from '../signup/model';
@@ -15,13 +15,29 @@ export class LoginService {
     // this.userDataSource.next(
   }
 isUserLoggedIn=new BehaviorSubject<boolean>(false);
+invalidUserAuth= new EventEmitter<boolean>(false)
   userLoginUp
   (data:UserLoginDetails){
-    console.log("call 1 ")
-    this.http.post('http://localhost:3000/login',data,{observe:'response'}).subscribe((result)=>{
-      this.isUserLoggedIn.next(true);
-      localStorage.setItem('userlogin',JSON.stringify(result.body))
-      this.router.navigate(['welcomeuser'])  
+    console.log("hello ",data);
+     this.http.get(`http://localhost:3000/signup?email=${data.userEmail}&pass=${data.userPassword}`, {observe:'response'}).subscribe((result:any)=>{
+      // console.log(result);
+      // if(result && result.id)
+      // {
+      //   this.isUserLoggedIn.next(true);
+      //   localStorage.setItem('userlogin',JSON.stringify(result.body))
+      //   this.router.navigate(['welcomeuser'])  
+      // }else{
+
+      // }
+      console.log("res => ",result)
+      if(result && result.body.length>=1 ){
+        localStorage.setItem('userlogin',JSON.stringify(result.body));
+        this.isUserLoggedIn.next(true);
+        this.router.navigate(['/welcomeuser']);
+        this.invalidUserAuth.emit(false)
+      }else{
+        this.invalidUserAuth.emit(true)
+      }
     });
   }
 

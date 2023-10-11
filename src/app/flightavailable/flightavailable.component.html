@@ -1,8 +1,8 @@
 <div class="container">
-  <br>
-    <h2 style="color:antiquewhite;">Flights From {{searchResults.origin}} Origin to {{searchResults.destination}} Destination</h2>
+    <h2>Flights From {{searchResults.origin}} Origin to {{searchResults.destination}} Destination</h2>
+    <br>
     <table class="table table-info">
-      <thead>
+      <thead class="card-header">
       <tr>
         <th>Flight Available</th>
         <th>Origin Time</th>
@@ -12,8 +12,8 @@
         <th>Take Flight</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let flight of flightresult">
+    <tbody class="card-body">
+      <tr *ngFor="let flight of flightresult ">
         <td>{{flight.flightName}}</td>
         <td>{{flight.originTime | date :'shortTime'}}</td>
         <td>{{flight.timeTaken}}</td>

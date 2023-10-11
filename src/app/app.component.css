@@ -3,7 +3,7 @@ body{
 }
 .imagebackground{
     background-image: url('src\assets\images\image_1.avif');
-    position: absolute;
+    position: fixed;
     /* background-position: center; */
     width: 100vw;
     height: 100vh;

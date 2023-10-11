@@ -6,11 +6,6 @@ import { Observable } from 'rxjs';
 import { LoginService } from './service/login/login.service';
 import { AdminloginService } from './service/adminlogin.service';
 
-// export const authGuard: CanActivateFn = (route, state) => {
-  
-//   return true;
-// }; 
-
 @Injectable({
   providedIn:'root'
 })
