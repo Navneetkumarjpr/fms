@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+  
+    justify-content: center;
+    margin-top: auto;
+    height: 60vh;
+    width: 100%;
+  padding-top: 3rem;
+   }
+  
+   form {
+  
+    border: 2px solid black;
+  
+    width: 30%;
+    display: flex;
+    margin-top: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+    padding: 20px;
+  
+   }
+  
+   .AvailableFlights {
+  
+    padding-bottom: 10px;
+    background-color: #d39e00;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  .AvailableFlights a{
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: white;
+    justify-self: center;
+  }
+   h2 {
+  
+    color: rgb(202, 65, 133); /* Set the color of the welcome text to pink */
+  
+   }
+  
+   form input[type="button"] {
+  
+    font-size: 18px; /* Adjust the font size as needed */
+  
+   }

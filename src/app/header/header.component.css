@@ -8,20 +8,37 @@
 .headerheading{
     /* filter: blur(1px); */
     /* background: none; */
-    color: whit;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .header{
     border-bottom: 2px solid black;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+    /* background:none; */
+    background-color: rgb(240, 173, 30);
     /* background-color: rgb(2, 15, 15); */
 }
 .homecontainer{
-    background-color: aqua;
+    /* background-color: rgb(194, 194, 13); */
 }
 .navbarbutton a{
     background: none;
-    color: white;
     text-decoration: none;
+    color: white;
+}
+.navbarbutton{
+    margin-right: 1rem;
+    color: white;
+    background-color: rgb(194, 194, 13);
+    border: none;
+
 }
 .navbarlist{
     border: none;

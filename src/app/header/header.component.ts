@@ -43,6 +43,13 @@ export class HeaderComponent implements OnInit{
           this.buttonFlag=false;
         }
         console.log(this.buttonFlag)
+
+
+        if(localStorage.getItem('adminlogin')){
+          this.admin=true;
+        }else{
+          false
+        }
       })
   }
 
@@ -53,6 +60,14 @@ export class HeaderComponent implements OnInit{
       this.buttonFlag=false
       console.log("second ",this.buttonFlag)
       this.route.navigate(['login'])
+      // window.location.reload()
+    }
+    if(localStorage.getItem('adminlogin')){
+      localStorage.removeItem('adminlogin')
+      console.log("first ",this.buttonFlag)
+      this.admin=false
+      console.log("second ",this.buttonFlag)
+      this.route.navigate(['adminlogin'])
       // window.location.reload()
     }
   }

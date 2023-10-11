@@ -8,13 +8,6 @@
       "id": 2
     },
     {
-      "email": "",
-      "name": "",
-      "phone": 0,
-      "pass": "",
-      "id": 6
-    },
-    {
       "email": "asdgfihlg@hs.com",
       "name": "jsdhf",
       "phone": 8648654,
@@ -58,6 +51,13 @@
       "arrival": "bsdhh",
       "bookdate": "2023-10-03",
       "id": 13
+    },
+    {
+      "email": "jags@gmail.com",
+      "name": "jags",
+      "phone": 4654165321321,
+      "pass": "12345678",
+      "id": 15
     }
   ],
   "login": [
@@ -81,5 +81,21 @@
       "password": "sdkjfsdfd",
       "id": 4
     }
-  ]
+  ],
+  "flights": [
+    {
+      "departure": "adf",
+      "arrival": "adsfadf",
+      "bookdate": "2023-10-03",
+      "id": 1
+    }
+  ],
+  "admin":[
+  {
+    "email": "prashant@gmail.com",
+    "pass": "12345678",
+    "name":"Navneet",
+    "id": 4
+  }],
+  "addflight":[]
 }

@@ -1,6 +1,8 @@
-<div>
-    <h2>Flights From {{searchResults.origin}} to {{searchResults.destination}}</h2>
-    <table class="table">
+<div class="container">
+    <h2>Flights From {{searchResults.origin}} Origin to {{searchResults.destination}} Destination</h2>
+    <br>
+    <table class="table table-info">
+      <thead class="card-header">
       <tr>
         <th>Flight Available</th>
         <th>Origin Time</th>
@@ -9,6 +11,8 @@
         <th>Price</th>
         <th>Take Flight</th>
       </tr>
+    </thead>
+    <tbody class="card-body">
       <tr *ngFor="let flight of flightresult ">
         <td>{{flight.flightName}}</td>
         <td>{{flight.originTime | date :'shortTime'}}</td>
@@ -19,6 +23,7 @@
           <button class="btn btn-primary" (click)="ViewDetails(flight.flightId)">Take FLight</button>
         </td>
       </tr>
+    </tbody>
     </table>
 
 </div>
