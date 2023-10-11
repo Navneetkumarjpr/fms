@@ -3,18 +3,19 @@ import { searchflight } from './search';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SearchflightsService } from '../service/searchflights.service';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { FlightModel } from '../model/flightModel';
+// import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-searchflight',
   templateUrl: './searchflight.component.html',
   styleUrls: ['./searchflight.component.css']
 })
 export class SearchflightComponent implements OnInit{
-  searchflight: undefined | searchflight[]
-  @Input() searchResults =new searchflight();
+  searchflight: undefined | FlightModel[]
+  @Input() searchResults =new FlightModel();
   flightresult:undefined
-  icon = faTrash;
-  iconEdit=faEdit;
+  // icon = faTrash;
+  // iconEdit=faEdit;
   constructor(private router:Router, private http:HttpClient, private flight:SearchflightsService){
 
   }

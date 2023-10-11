@@ -3,6 +3,7 @@ import { booking } from '../welcomeuser/booking';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { searchflight } from '../searchflight/search';
+import { FlightModel } from '../model/flightModel';
 
 @Injectable({
   providedIn: 'root'
@@ -20,17 +21,24 @@ export class SearchflightsService {
     });
   }
   flightList() {
-    return this.http.get<searchflight[]>('http://localhost:3000/viewallflights');
+    return this.http.get<FlightModel[]>('http://localhost:3000/viewallflights');
   }
 
   getFlight(id: any) {
-    return this.http.get<searchflight>(`http://localhost:3000/viewallflights?flightNumber=${id}`);
+    return this.http.get<FlightModel[]>(`http://localhost:3000/viewallflights?flightNumber=${id}`);
   }
 
-  updateProduct(product: searchflight) {
-    return this.http.put<searchflight>(
+  updateProduct(product: any) {
+    console.log(product.id);
+    
+    return this.http.put<any>(
       `http://localhost:3000/viewallflights/${product.flightNumber}`,
       product
     );
+  }
+
+  addFlight(data: FlightModel) {
+    console.log("add ",data)
+    return this.http.post('http://localhost:3000/viewallflights', data,{observe:'response'});
   }
 }

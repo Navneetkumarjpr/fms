@@ -113,54 +113,25 @@
       "id": 4
     }
   ],
-  "admin":[
-  {
-    "email": "prashant@gmail.com",
-    "pass": "12345678",
-    "name":"Navneet",
-    "id": 4
-  }],
-  "addflight":[],
-  "viewallflights":[
+  "admin": [
     {
-      "flightNumber":1,
-      "flightName":"Akasa Air",
-      "origin":"pune",
-      "destination":"jaipur",
-    "departureDate": "12/12/2002",
-    "departureTime": "11:04 pm",
-    "arrivalDate": "12/12/2002",
-    "arrivalTime":"12:04 pm"
-    },
+      "email": "prashant@gmail.com",
+      "pass": "12345678",
+      "name": "Navneet",
+      "id": 4
+    }
+  ],
+  "addflight": [],
+  "viewallflights": [
     {
-      "flightNumber":2,
-      "flightName":"Akasa Air",
-      "origin":"pune",
-      "destination":"jaipur",
-    "departureDate": "12/12/2002",
-    "departureTime": "11:04 pm",
-    "arrivalDate": "12/12/2002",
-    "arrivalTime":"12:04 pm"
-    },
-    {
-      "flightNumber":3,
-      "flightName":"Akasa Air",
-      "origin":"pune",
-      "destination":"jaipur",
-    "departureDate": "12/12/2002",
-    "departureTime": "11:04 pm",
-    "arrivalDate": "12/12/2002",
-    "arrivalTime":"12:04 pm"
-    },
-    {
-      "flightNumber":4,
-      "flightName":"Akasa Air",
-      "origin":"pune",
-      "destination":"jaipur",
-    "departureDate": "12/12/2002",
-    "departureTime": "11:04 pm",
-    "arrivalDate": "12/12/2002",
-    "arrivalTime":"12:04 pm"
+      "flightNumber": 1,
+      "origin": "Mumbai",
+      "destination": "jaipur",
+      "departureDate": "2023-10-26",
+      "departureTime": "23:24",
+      "departureCity": "46485",
+      "flightName": "daadawadadwaaw",
+      "id": 1
     }
   ]
 }

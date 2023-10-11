@@ -4,6 +4,7 @@ import { updateflight } from './updateflight';
 import { ActivatedRoute } from '@angular/router';
 import { SearchflightsService } from '../service/searchflights.service';
 import { searchflight } from '../searchflight/search';
+import { FlightModel } from '../model/flightModel';
 
 @Component({
   selector: 'app-updateflight',
@@ -12,7 +13,7 @@ import { searchflight } from '../searchflight/search';
 })
 export class UpdateflightComponent {
   // flights=new AddFlight;
-  flights:undefined | searchflight
+  flights:FlightModel | undefined
   flightMessage: undefined | string;
   constructor(private route: ActivatedRoute, private product: SearchflightsService) {}
 
@@ -20,17 +21,21 @@ export class UpdateflightComponent {
     let productId = this.route.snapshot.paramMap.get('id');
     console.log("id one",productId);
     productId &&
-      this.product.getFlight(productId).subscribe((data) => {
-        console.log("get one",data.flightNumber);
-        this.flights= data
+      this.product.getFlight(productId).subscribe((data: FlightModel[]) => {
+        console.log("get one",data[0]);
+        this.flights=data[0];
+        // this.flights.departureDate=new Date(this.flights.departureDate,'yyyy-MM-dd')
+        
+        console.log(this.flights.flightNumber)
       });
   }
     
-  onSubmit(data: any) {
+  onSubmit(data: FlightModel) {
     if (this.flights) {
-      data.id = this.flights.flightNumber;
+      data.flightNumber = this.flights.flightNumber;
     }
     this.product.updateProduct(data).subscribe((result) => {
+      console.log("update ",result)
       if (result) {
         this.flightMessage = 'Product has updated';
       }

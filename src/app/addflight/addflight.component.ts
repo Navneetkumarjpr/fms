@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AddFlight } from './addflight';
+import { FlightModel } from '../model/flightModel';
+import { SearchflightsService } from '../service/searchflights.service';
 
 @Component({
   selector: 'app-addflight',
@@ -11,11 +13,22 @@ export class AddflightComponent {
   // constructor(){
   //   this.flights=new AddFlight()
   // }
-  flights = new AddFlight()
-  onSubmit(form: any) {
-    if (form.valid) {
-      // Handle form submission
-      console.log('Form submitted:', form.value);
-    }
+  flights = new FlightModel()
+  addProductMessage: string | undefined;
+  constructor(private product: SearchflightsService) {}
+
+  ngOnInit(): void {}
+
+  onSubmit(data: FlightModel) {
+    this.product.addFlight(data).subscribe((result) => {
+      console.warn("res ",result);
+      if (result) {
+        this.addProductMessage = 'Product is added successfully';
+      }
+    });
+
+    setTimeout(() => {
+      this.addProductMessage=undefined
+    }, 3000);
   }
 }
