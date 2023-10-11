@@ -21,9 +21,9 @@ export class HeaderComponent implements OnInit{
     // if(localStorage.getItem('userlogin')?.length){
     //   this.buttonFlag=true;
     // }
-    this.buttonFlag=this.userlog.setlogin()
+    // this.buttonFlag=this.userlog.setlogin()
     // this.username=localStorage.getItem('userlogin').username;
-    console.log("flag button ",this.buttonFlag)
+    // console.log("flag button ",this.buttonFlag)
       // this.user=true;
       // this.admin=true;
       // if(sessionStorage.getItem('role')==='user'){
@@ -35,6 +35,15 @@ export class HeaderComponent implements OnInit{
       // this.username=sessionStorage.getItem('username');
       // if(this.username!=null)
       //     this.username=this.username.toUpperCase();
+      this.route.events.subscribe((data)=>{
+        console.log("inside")
+        if(localStorage.getItem('userlogin')){
+          this.buttonFlag=true;
+        }else{
+          this.buttonFlag=false;
+        }
+        console.log(this.buttonFlag)
+      })
   }
 
   logout(){

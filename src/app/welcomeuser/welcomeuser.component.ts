@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { booking } from './booking';
 import { Router } from '@angular/router';
 import { SearchflightsService } from '../service/searchflights.service';
@@ -9,8 +9,12 @@ import { SearchflightsService } from '../service/searchflights.service';
   templateUrl: './welcomeuser.component.html',
   styleUrls: ['./welcomeuser.component.css']
 })
-export class WelcomeuserComponent {
+export class WelcomeuserComponent implements OnInit{
+  user: string=''
   constructor(private router:Router, private searchflights:SearchflightsService){
+    
+  }
+  ngOnInit(){
 
   }
   bookFlight = new booking()

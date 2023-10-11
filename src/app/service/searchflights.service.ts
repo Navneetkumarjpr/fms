@@ -14,7 +14,7 @@ export class SearchflightsService {
   userbooking(data:booking){
     this.http.post('http://localhost:3000/signup',data,{observe:'response'}).subscribe((result)=>{
       // this.isUserLoggedIn.next(true);
-      localStorage.setItem('user',JSON.stringify(result.body))
+      // localStorage.setItem('user',JSON.stringify(result.body))
       this.router.navigate(['flights'])
     });
   }
