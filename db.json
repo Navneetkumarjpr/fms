@@ -113,17 +113,6 @@
       "id": 4
     }
   ],
-<<<<<<< HEAD
-  "admin": [
-    {
-      "email": "prashant@gmail.com",
-      "pass": "12345678",
-      "name": "Navneet",
-      "id": 4
-    }
-  ],
-  "addflight": []
-=======
   "admin":[
   {
     "email": "prashant@gmail.com",
@@ -174,5 +163,4 @@
     "arrivalTime":"12:04 pm"
     }
   ]
->>>>>>> 718c87af1142dc441e8e3564153d2a1021d4a83c
 }
