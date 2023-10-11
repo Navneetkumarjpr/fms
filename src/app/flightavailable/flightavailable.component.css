@@ -31,3 +31,13 @@
   .price {
     font-weight: bold;
   }
+  .even
+  {
+    color: antiquewhite;
+    background-color: tomato;
+  }
+  .odd
+  {
+    color: antiquewhite;
+    background-color: aqua;
+  }
