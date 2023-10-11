@@ -93,14 +93,33 @@
       "arrival": "adsfadf",
       "bookdate": "2023-10-03",
       "id": 1
+    },
+    {
+      "departure": "degff",
+      "arrival": "dfggfd",
+      "bookdate": "2023-10-19",
+      "id": 2
+    },
+    {
+      "departure": "degff",
+      "arrival": "fdff",
+      "bookdate": "2023-10-13",
+      "id": 3
+    },
+    {
+      "departure": "degff",
+      "arrival": "dfggfd",
+      "bookdate": "2023-10-13",
+      "id": 4
     }
   ],
-  "admin":[
-  {
-    "email": "prashant@gmail.com",
-    "pass": "12345678",
-    "name":"Navneet",
-    "id": 4
-  }],
-  "addflight":[]
+  "admin": [
+    {
+      "email": "prashant@gmail.com",
+      "pass": "12345678",
+      "name": "Navneet",
+      "id": 4
+    }
+  ],
+  "addflight": []
 }

@@ -18,12 +18,13 @@ export class FlightBookingComponent {
    console.log( this.activateroute.snapshot.paramMap.get('id'));
    this.user1=new User();
   }
-  
 
   onSubmit(form: any) {
     if (form.valid) {
-      // Handle form submission
-      console.log('Form submitted:', form.value);
+      console.log("Hello")
+    }
+    else{
+      console.log("add proper values")
     }
   }
   openModel()
@@ -47,6 +48,5 @@ export class FlightBookingComponent {
   showTicket()
   {
     this._router.navigate([`displayticket`]);
-    
   }
 }

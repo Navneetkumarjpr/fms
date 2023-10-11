@@ -1,7 +1,7 @@
 <div class="form-group">
     <br>
     <br>
-    <h2 class="text-center" style="color: antiquewhite;">Book Flight Ticket</h2>
+    <h2 class="text-center mt-5" style="color: antiquewhite;">Book Flight Ticket</h2>
     <br>
     <br>
     <form  #signupform="ngForm" (ngSubmit)="onSubmit(signupform.value)">
@@ -18,7 +18,8 @@
        
         <div class="form-group">
             <label for="Age"><b>Enter Age</b></label>
-            <input type="text" placeholder="Enter Age"  required class="form-control" [(ngModel)]="user1.userAge" name="Age" #Age="ngModel">
+            <input type="text" placeholder="Enter Age"  required class="form-control" 
+            [(ngModel)]="user1.userAge" name="Age" #Age="ngModel" maxlength="2">
             <div *ngIf="Age.touched && Age.errors?.['required']">
                <div class="alert alert-danger" style="padding: 0;">
                    Age is blank
@@ -28,25 +29,37 @@
         
         <div class="form-group">
             <label for="Phone"><b>Enter Phone Number</b></label>
-            <input type="text" placeholder="Enter Phone number"  required class="form-control" [(ngModel)]="user1.userPhone" name="Phone" #Phone="ngModel">
+            <input type="text" placeholder="Enter Phone number"  required class="form-control" 
+            [(ngModel)]="user1.userPhone" name="Phone" #Phone="ngModel" minlength="10" maxlength="10" >
             <div *ngIf="Phone.touched && Phone.errors?.['required']">
                <div class="alert alert-danger" style="padding: 0;">
                    Phone number is blank
                </div>
            </div>
+           <div *ngIf="Phone.touched && Phone.errors?.['minlength'] && Phone.errors?.['maxlength']">
+            <div class="alert alert-danger" style="padding: 0;">
+                Phone number is not correct
+            </div>
+        </div>
            </div>
         
         <div class="form-group">
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email"  required class="form-control" [(ngModel)]="user1.userEmail" name="email" #email="ngModel">
+            <input type="text" placeholder="Enter Email"  required class="form-control" 
+            [(ngModel)]="user1.userEmail" name="email" #email="ngModel" pattern="[a-zA-Z0-9]+@[a-z]+.[a-z]{2,4}">
             <div *ngIf="email.touched && email.errors?.['required']">
                <div class="alert alert-danger" style="padding: 0;">
                    Email is blank
                </div>
            </div>
+           <div *ngIf="email.touched && email.errors?.['pattern']">
+            <div class="alert alert-danger" style="padding: 0;">
+                Email is invalid
+            </div>
+        </div>
            </div>
-        <div class="col-md-12 text-center">
-            <button class="btn btn-primary" type="submit" (click)="openModel()">Book Ticket</button>
+        <div class="col-md-12 text-center" *ngIf="true">
+            <button class="btn btn-primary" type="submit" (click)="openModel()" [disabled]="signupform.invalid">Book Ticket</button>
         </div>
         </div>
     </form>

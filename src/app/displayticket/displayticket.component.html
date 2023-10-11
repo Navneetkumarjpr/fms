@@ -1,11 +1,56 @@
-<div class="ticket-container">
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-info cardheader">
+                <h5 class="text-black-500">Airline Name </h5>
+                <h5 class="text-black-500">Boarding Pass</h5>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Passenger Name</th>
+                            <th>Seat No.</th>
+                            <!-- <th>Flight No.</th> -->
+                            <th>origin</th>
+                            <th>destination</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user1 of userDetails">
+                            <td>{{user1.userName}}</td>
+                            <td>{{user1.seatNo}}</td>
+                            <td>{{user1.origin}}</td>
+                            <td>{{user1.destination}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="ticket-container"> -->
     <!-- <h2>Airbus</h2> -->
-    <span>Airbus</span>
+    <!-- <span>Airbus</span>
     <div class="origindestination">
         <span>Delhi</span>
-        <span style="margin-left: 590px;">Pune</span>
+        <span style="margin-left: 590px;">Pune</span> -->
 
-    </div>
+
+
+
+
+
+
+    <!-- </div>
     <div class="flightdetails">
         <span>4:53</span>
         <span>1h 55m</span>
@@ -13,4 +58,4 @@
         <span>3542</span>
     </div>
 
-</div>
+</div> -->
