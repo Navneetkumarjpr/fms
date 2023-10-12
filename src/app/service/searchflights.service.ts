@@ -41,4 +41,8 @@ export class SearchflightsService {
     console.log("add ",data)
     return this.http.post('http://localhost:3000/viewallflights', data,{observe:'response'});
   }
+  deleteFlight(id: number) {
+    return this.http.delete(`http://localhost:3000/products/${id}`);
+  }
+
 }

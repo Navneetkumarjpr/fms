@@ -16,6 +16,7 @@ export class SearchflightComponent implements OnInit{
   flightresult:undefined
   // icon = faTrash;
   // iconEdit=faEdit;
+  productMessage:string=''
   constructor(private router:Router, private http:HttpClient, private flight:SearchflightsService){
 
   }
@@ -24,16 +25,16 @@ export class SearchflightComponent implements OnInit{
   }
 
   deleteflight(id: number) {
-    // this.product.deleteProduct(id).subscribe((result) => {
-    //   if (result) {
-    //     this.productMessage = 'Product is deleted';
+    this.flight.deleteFlight(id).subscribe((result) => {
+      if (result) {
+        this.productMessage = 'Product is deleted';
 
-    //     this.list();
-    //   }
-    // });
-    // setTimeout(() => {
-    //   this.productMessage = undefined;
-    // }, 3000);
+        this.list();
+      }
+    });
+    setTimeout(() => {
+      this.productMessage = '';
+    }, 3000);
   }
 
   list() {
